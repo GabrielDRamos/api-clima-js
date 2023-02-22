@@ -7,7 +7,7 @@ const cidadeClimaerro  = document.getElementById('cidade-clima-erro')
 buttonSubmit.addEventListener('click', () => {
   const cidade = cidadeInput.value
   const apiKey = "73ef2ace58d9a14786d60bf54f1c8a9d"
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&language=pt-br`
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`
 
 
   fetch(apiUrl)
@@ -24,7 +24,7 @@ buttonSubmit.addEventListener('click', () => {
     })
     .catch((error) => {
         cidadeClimadados.innerHTML = '';
-        cidadeClimaerro.innerHTML = 'Erro'
+        cidadeClimaerro.innerHTML = 'Erro! Digite uma cidade válida!'
     })
 })
 
